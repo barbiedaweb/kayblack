@@ -17,4 +17,19 @@ const perguntas = [
         enunciado: "No âmbito tecnologico, você prefere:",
         alternativas: ["Ter uma tecnologia que diz qual a doença do paciente, mas ter metade da população perdendo seu emprego na saúde, Ganhar todo ano o celular do momento, mas ter todas suas informações vazadas"]
     }
+
 ]
+
+let atual = 0;
+
+function mostraPergunta(){
+    if(atual>= perguntas.length){
+        
+    }
+}
+
+for(const valor of valores){
+    soma = soma + valor;
+}
+let calculo = soma/valores.length;
+console.log("A média dos valores foi: " + calculo)
