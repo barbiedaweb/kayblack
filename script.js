@@ -29,4 +29,13 @@ function mostraPerguntas (){
 
 }
 
+function mostraAlternativas (){
+    for (const alternativa of perguntasAtual.alternativas) {
+        const botaoAlternativa = document.createElement("button");
+        botaoAlternativa.textContent = alternativa; 
+        caixaAlternativas.appendChild(botaoAlternativa);
+    }
+}
+
+
 mostraPerguntas();
