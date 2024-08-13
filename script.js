@@ -21,15 +21,12 @@ const perguntas = [
 ]
 
 let atual = 0;
+let perguntaAtual;
 
-function mostraPergunta(){
-    if(atual>= perguntas.length){
-        
-    }
+function mostraPerguntas (){
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+
 }
 
-for(const valor of valores){
-    soma = soma + valor;
-}
-let calculo = soma/valores.length;
-console.log("A média dos valores foi: " + calculo)
+mostraPerguntas();
