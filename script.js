@@ -10,11 +10,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Ter a oportunidade de ganhar uma grande quantidade de dinheiro, mas perder o contato com todos seus amigos.",
-                afirmacao: "Afirmação 1",
+                afirmacao: "Você ficou rico, mas nao vai ter ninguem para poder compartilhar sua conquista.",
             },
             {
                 texto: "Realizar seu maior sonho de morar em outro país, mas ficar 7 anos sem nenhum contato com sua família e amigos.",
-                afirmacao: "Afirmação 2",
+                afirmacao: "Você fez uma otima escolha, pois vai conhecer um novo lugar e depois vai poder ver sua familia novamente.",
             }]
     },
     {
@@ -22,11 +22,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Ajudar a combater a poluição do oceano com uma nova tecnologia, mas ter uma extinção de animais marinhos",
-                afirmacao: "Afirmação 3",
+                afirmacao: "Você ajudou na poluição, mas não tem mais tantos animais marinhos",
             },
             {
-                texto: "Acabar com o uso d,e combustíveis fósseis, mas ver metade da população perdendo o emprego.",
-                afirmacao: "Afirmação 4"
+                texto: "Acabar com o uso de combustíveis fósseis, mas ver metade da população perdendo o emprego.",
+                afirmacao: "Você ajudou a acabar com o uso e as população encontrou novos empregos"
             }]
         },
     {
@@ -35,11 +35,11 @@ const perguntas = [
         alternativas: [
             {
                texto:"Ter uma tecnologia que diz qual a doença do paciente, mas ter metade da população perdendo seu emprego na saúde.",
-               afirmacao: "Afirmação 5",
+               afirmacao: "Você livrou pessoas do sofrimento e abriu novas oportunidades de emprego",
             },
             {
                 texto: "Ganhar todo ano o celular do momento, mas ter todas suas informações vazadas.",
-                afirmacao: "Afirmação 6"
+                afirmacao: "Você tem um celular bom, mas não tem privacidade."
             }]
     }
 
@@ -47,6 +47,8 @@ const perguntas = [
 
 let atual = 0;
 let perguntaAtual;
+let historiaFinal = "";
+
 
 function mostraPerguntas() {
     perguntaAtual = perguntas[atual];
@@ -60,14 +62,15 @@ function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
         const botaoAlternativa = document.createElement("button");
         botaoAlternativa.textContent = alternativa.texto;
-        botaoAlternativa.addEventListener("click", function(){
-            atual++;
-            mostraPerguntas();
-        
-        })
+        botaoAlternativa.addEventListener("click", ()=> opcaoSelecionada(afirmacao));
         caixaAlternativas.appendChild(botaoAlternativa);
     }
 }
 
+function opcaoSelecionada (){
+    const afirmacoes = opcaoSelecionada.afirmacoes;
 
+    atual++;
+    mostraPerguntas();
+}
 mostraPerguntas();
