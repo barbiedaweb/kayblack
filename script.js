@@ -79,6 +79,7 @@ function respostaSelecionada (opcaoSelecionada){
 }
 
 function mostraResultado(){
+    caixaPerguntas.textContent = "Você escolheu ...."
     caixaAlternativas.textContent = "";
 }
 mostraPerguntas();
